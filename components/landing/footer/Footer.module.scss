@@ -1,0 +1,33 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/utils";
+
+.footer_sectionsWrapper {
+  padding: 1.5rem 10%;
+  background-color: $col-dark;
+  color: $col-white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .footer_sections {
+    display: flex;
+    flex-direction: row;
+
+    @include respondMax("tablet") {
+      text-align: left;
+      flex-direction: column;
+    }
+    .footer_section {
+      margin-right: 120px;
+      @include respondMax("tablet") {
+        margin-right: 0px;
+      }
+      h4 {
+        color: #f7b3b4;
+        font-size: 14px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

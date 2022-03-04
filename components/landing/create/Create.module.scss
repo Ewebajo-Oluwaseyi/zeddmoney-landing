@@ -1,0 +1,83 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/utils";
+
+.createWrapper {
+  padding: 4rem 5%;
+  height: 100%;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.create {
+  @include flex(space-between, center, nowrap);
+  @include respondMax("tablet") {
+    @include flex(space-between, center, column nowrap);
+  }
+}
+
+.create_textsection {
+  text-align: left;
+  padding: 1rem 2rem;
+  margin-right: 20px;
+  width: 50%;
+  h3 {
+    font-size: 48px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    @include respondMax("tablet") {
+      font-size: 25px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+  }
+  p {
+    margin-top: 1rem;
+    color: $col-grey !important;
+    line-height: 2rem;
+    font-size: 14px;
+    @include respondMax("tablet") {
+      font-size: 12px;
+      line-height: 4rem;
+    }
+  }
+  @include respondMax("tablet") {
+    padding: 1rem 2%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.create_buttons {
+  margin: 1.5rem 0;
+  width: fit-content;
+  text-align: left;
+  @include respondMax("tablet") {
+    margin: 1.5rem auto;
+  }
+  .create_button {
+    @extend %btn_primary;
+
+    @include respondMax("tablet") {
+      width: 100%;
+      padding: 2.5rem 4.5rem !important;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+}
+
+.create_imagesection {
+  //margin-top: 500px;
+}
+
+.create_image {
+  // position: absolute;
+  // bottom: 0;
+  // right: 0;
+}

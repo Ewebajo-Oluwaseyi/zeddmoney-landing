@@ -1,0 +1,173 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/utils";
+
+.hero {
+  @extend %page-section;
+
+  height: 100%;
+  margin-top: 2rem;
+  margin: auto;
+}
+
+.hero_textsection {
+  text-align: center;
+  padding: 1rem 18%;
+  h3 {
+    font-size: 48px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    @include respondMax("tablet") {
+      font-size: 25px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+  }
+  p {
+    margin-top: 1rem;
+    color: $col-grey !important;
+    padding: 0 10%;
+    line-height: 2rem;
+    font-size: 18px;
+    @include respondMax("tablet") {
+      padding: 0;
+      font-size: 15px;
+      line-height: 4rem;
+    }
+  }
+  @include respondMax("tablet") {
+    padding: 1rem 2%;
+  }
+}
+
+.hero_buttons {
+  margin: 1.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  column-gap: 1rem;
+  @include respondMax("tablet") {
+    width: 85%;
+    margin: 1.5rem auto;
+    row-gap: 1.2rem;
+    grid-template-columns: 1fr;
+  }
+  .hero_button {
+    padding: 1.1rem 1.9rem !important;
+    @extend %btn_primary;
+
+    &:nth-child(2) {
+      @extend %btn_primary_outline;
+      font-size: 12px;
+    }
+
+    @include respondMax("tablet") {
+      width: 100%;
+      font-size: 12px;
+      padding: 2.5rem 4.5rem !important;
+    }
+  }
+}
+
+.hero_imagesection {
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 10;
+  > span {
+    @include respondMax("tablet") {
+      width: 80% !important;
+    }
+  }
+  @include respondMax("tablet") {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.avartar {
+  position: absolute;
+  z-index: 20;
+  right: 30%;
+  @include respondMax("tablet") {
+    right: -5%;
+  }
+  > span {
+    @include respondMax("tablet") {
+      width: 80% !important;
+    }
+  }
+}
+.dare {
+  position: absolute;
+  z-index: 20;
+  left: 30%;
+  top: 0;
+  @include respondMax("tablet") {
+    left: -5%;
+  }
+  > span {
+    @include respondMax("tablet") {
+      width: 80% !important;
+    }
+  }
+}
+.modal {
+  position: absolute;
+  z-index: 20;
+  left: 35%;
+  @include respondMax("tablet") {
+    left: 70%;
+    top: 20px;
+  }
+  > span {
+    @include respondMax("tablet") {
+      width: 80% !important;
+    }
+  }
+}
+.modal1 {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  left: -3%;
+  bottom: 30px;
+  @include respondMax("tablet") {
+    display: block;
+  }
+}
+
+.hero_bottomsections {
+  margin: 1.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
+  column-gap: 3rem;
+  @include respondMax("tablet") {
+    width: 85%;
+    margin: 1.5rem auto;
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  .hero_bottomsection {
+    @include flex(space-between, center, column nowrap);
+    h4 {
+      font-family: "Space Grotesk", sans-serif;
+      margin: 0;
+      font-size: 20px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      color: $col-grey !important;
+      @include respondMax("tablet") {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/utils";
+
+.questionWrapper {
+  padding: 4rem 5%;
+  height: 100%;
+  margin-top: 2rem;
+}
+
+.question {
+  @include flex(space-between, center, nowrap);
+  @include respondMax("tablet") {
+    @include flex(space-between, center, column nowrap);
+  }
+}
+
+.question_textsections {
+}
+
+.question_textsection {
+  text-align: left;
+  margin-right: 20px;
+  width: 80%;
+  h3 {
+    font-size: 38px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    @include respondMax("tablet") {
+      font-size: 18px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+  }
+  p {
+    margin-top: 1rem;
+    color: $col-grey !important;
+    line-height: 2rem;
+    font-size: 14px;
+    @include respondMax("tablet") {
+      font-size: 12px;
+      line-height: 4rem;
+    }
+  }
+  @include respondMax("tablet") {
+    padding: 1rem 2%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.question_Questions {
+  text-align: left;
+  margin-right: 20px;
+  width: 60%;
+  @include respondMax("tablet") {
+    margin-right: 0px;
+    width: 100%;
+  }
+  .question_Question {
+    @include flex(space-between, center, nowrap);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &:nth-child(3) {
+      border-bottom: 0;
+    }
+    h3 {
+      padding-right: 20px;
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.question_imagesection {
+  display: block;
+  @include respondMax("tablet") {
+    display: none;
+  }
+  //margin-top: 500px;
+}
+
+.question_image {
+  // position: absolute;
+  // bottom: 0;
+  // right: 0;
+}

@@ -1,0 +1,96 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/utils";
+
+.aboutWrapper {
+  padding: 4rem 5%;
+  height: 100%;
+  margin-top: 2rem;
+}
+
+.about {
+  margin-bottom: 4rem;
+  @include flex(space-between, center, nowrap);
+  @include respondMax("tablet") {
+    @include flex(space-between, center, column nowrap);
+  }
+}
+
+.about_textsection {
+  text-align: left;
+  padding: 1rem 2rem;
+  margin-right: 20px;
+  width: 50%;
+  h3 {
+    font-size: 48px;
+    color: $col-primary;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    @include respondMax("tablet") {
+      font-size: 25px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+  }
+  p {
+    margin-top: 1rem;
+    color: $col-grey !important;
+    line-height: 2rem;
+    font-size: 14px;
+    @include respondMax("tablet") {
+      font-size: 12px;
+      line-height: 4rem;
+    }
+  }
+  @include respondMax("tablet") {
+    padding: 1rem 2%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.about_top {
+  display: none;
+  padding: 1rem 2%;
+  text-align: left;
+  width: 100%;
+  @include respondMax("tablet") {
+    display: block;
+  }
+  h3 {
+    font-size: 48px;
+    color: $col-primary;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    @include respondMax("tablet") {
+      font-size: 25px;
+    }
+  }
+  p {
+    margin-top: 1rem;
+    color: $col-grey !important;
+    line-height: 2rem;
+    font-size: 14px;
+    @include respondMax("tablet") {
+      font-size: 12px;
+      line-height: 4rem;
+    }
+  }
+}
+
+.about_imagesection2 {
+  display: block;
+  @include respondMax("tablet") {
+    display: none;
+  }
+}
+
+.about_image {
+  // position: absolute;
+  // bottom: 0;
+  // right: 0;
+}

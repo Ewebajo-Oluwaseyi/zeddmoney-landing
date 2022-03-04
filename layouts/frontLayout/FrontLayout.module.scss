@@ -1,0 +1,123 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/utils";
+
+.layout {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  background-color: $col-white;
+  padding: 1rem 5%;
+  position: relative;
+  @include flex(space-between, center, nowrap);
+  @include respondMax("tablet") {
+    padding: 3rem 5%;
+  }
+
+  .header_menuList {
+    list-style: none;
+    padding: 0;
+    margin-left: 6rem;
+    @include flex(space-between, center, nowrap);
+    @include respondMax("tablet") {
+      display: none;
+    }
+  }
+  .header_menuItem {
+    margin: 0 1.5rem;
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+  .header_menuLink {
+    font-size: 0.9rem;
+    color: $col-primary;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+      transform: scale(2);
+      filter: grayscale(90%);
+    }
+  }
+  .sidebarIcon {
+    cursor: pointer;
+    @include respondMin("tablet") {
+      display: none;
+    }
+  }
+}
+.topNav {
+  background-color: $col-white;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  .show {
+    display: block !important;
+  }
+  .hide {
+    display: none !important;
+  }
+
+  .header_menuList {
+    list-style: none;
+    padding: 0;
+    @include flex(space-between, center, column nowrap);
+  }
+  .header_menuItem {
+    margin: 3rem 1.5rem;
+    transition: transform 0.2s ease-out;
+    border-bottom: 1px solid $col-primary;
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+  .header_menuLink {
+    font-size: 3rem;
+    color: $col-primary;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+      transform: scale(2);
+      filter: grayscale(90%);
+    }
+  }
+}
+.footer {
+  padding: 1.5rem 5%;
+  background-color: $col-dark;
+  color: $col-white;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .footer_payment {
+    width: 30%;
+    font-size: 13px;
+    @include respondMax("tablet") {
+      width: 80%;
+      font-size: 2rem;
+    }
+  }
+  .footer_socials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    width: fit-content;
+    margin-top: 10px;
+    @include respondMax("tablet") {
+      column-gap: 1.5rem;
+    }
+
+    @include respondMax("tablet") {
+      order: 2;
+    }
+  }
+  .footer_social:hover {
+    transition: all 0.2s ease-out;
+    filter: grayscale(100%);
+    transform: scale(1.05);
+  }
+}

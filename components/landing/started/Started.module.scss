@@ -1,0 +1,133 @@
+@import "@/styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/utils";
+
+.startedWrapper {
+  padding: 2rem 0rem 0rem;
+  height: 100%;
+  margin-top: 2rem;
+  margin: 0 40px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 32px;
+  position: relative;
+  @include respondMax("tablet") {
+    margin: 0 20px;
+  }
+}
+
+.started {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0rem 5%;
+  @include respondMax("tablet") {
+    flex-direction: column;
+  }
+}
+
+.started_textsection {
+  text-align: left;
+  padding: 1rem 2rem;
+  width: 50%;
+  margin-right: 20px;
+  position: relative;
+  h3 {
+    font-size: 48px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    @include respondMax("tablet") {
+      font-size: 25px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    color: $col-black;
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+  }
+  p {
+    margin-top: 1rem;
+    color: $col-grey !important;
+    line-height: 2rem;
+    font-size: 18px;
+    @include respondMax("tablet") {
+      font-size: 15px;
+      line-height: 4rem;
+    }
+  }
+  @include respondMax("tablet") {
+    padding: 1rem 2%;
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+.started_buttons {
+  margin: 1.5rem 0;
+  width: fit-content;
+  text-align: left;
+  width: 100%;
+  font-size: 20px;
+  @include respondMax("tablet") {
+    width: 50%;
+    margin: 1.5rem 0;
+  }
+  .started_button {
+    @extend %btn_primary;
+    padding: 1.5rem 5rem !important;
+    @include respondMax("tablet") {
+      font-size: 10px;
+      width: 100%;
+      padding: 2.5rem 4.5rem !important;
+    }
+  }
+}
+
+.started_imagesection {
+  //margin-top: 500px;
+  position: relative;
+}
+
+.started_image {
+  margin-top: 160px;
+  z-index: 20;
+  @include respondMax("tablet") {
+    margin-top: 60px;
+    margin-left: 40px;
+  }
+  // position: absolute;
+  // bottom: 0;
+  // right: 0;
+}
+
+.okayHand {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  left: -60px;
+  > span {
+    border-bottom-left-radius: 32px;
+  }
+  @include respondMax("tablet") {
+    bottom: -170px;
+    left: -10px;
+    width: 60%;
+    > span {
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+.community {
+  position: absolute;
+  right: -60px !important;
+  bottom: 0px !important;
+  z-index: 40;
+  > span {
+    border-bottom-right-radius: 32px;
+  }
+  @include respondMax("tablet") {
+    right: -20px !important;
+    width: 60%;
+  }
+}
