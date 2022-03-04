@@ -3,7 +3,7 @@ import styles from "./FrontLayout.module.scss";
 import Link from "next/link";
 import { navLinks } from "@/mock";
 import zeddLogo from "@/public/svg/zeddLogo.svg";
-import zeddLogoLight from "@/public/svg/zeddLogoLight.svg";
+import zeddlogolight from "@/public/svg/zeddLogoLight.svg";
 import facebookIcon from "@/public/svg/facebook.svg";
 import instagramIcon from "@/public/svg/instagram.svg";
 import twitterIcon from "@/public/svg/twitter.svg";
@@ -72,7 +72,7 @@ const Front = ({ children }: Props) => {
         </div>
         <main>{children}</main>
         <footer className={styles.footer}>
-          <Image src={zeddLogoLight} alt="zeddlogo" width="100" height="56" />
+          <Image src={zeddlogolight} alt="zeddlogo" width="100" height="56" />
           <div>
             <p className={styles.footer_payment}>
               Zeddpay is a payment platform that allows you pay for services

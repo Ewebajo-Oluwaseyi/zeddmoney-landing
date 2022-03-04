@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import styles from "./question.module.scss";
+import styles from "./Question.module.scss";
 import Image from "next/image";
 import phoneImage from "@/public/img/phone1.png";
 import addCircleIcon from "@/public/svg/add-circle.svg";
