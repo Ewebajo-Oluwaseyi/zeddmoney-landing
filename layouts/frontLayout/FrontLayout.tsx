@@ -3,7 +3,7 @@ import styles from "./FrontLayout.module.scss";
 import Link from "next/link";
 import { navLinks } from "@/mock";
 import zeddLogo from "@/public/svg/zeddLogo.svg";
-import zeddlogolight from "@/public/svg/zeddLogoLight.svg";
+import zeddlogolight from "@/public/svg/zeddlogolight.svg";
 import facebookIcon from "@/public/svg/facebook.svg";
 import instagramIcon from "@/public/svg/instagram.svg";
 import twitterIcon from "@/public/svg/twitter.svg";
