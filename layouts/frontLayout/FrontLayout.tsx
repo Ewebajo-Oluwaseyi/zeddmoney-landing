@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./FrontLayout.module.scss";
 import Link from "next/link";
 import { navLinks } from "@/mock";
-import zeddLogo from "@/public/svg/zeddLogo.svg";
+import zeddlogo from "@/public/svg/zeddlogo.svg";
 import zeddlogolight from "@/public/svg/zeddlogolight.svg";
 import facebookIcon from "@/public/svg/facebook.svg";
 import instagramIcon from "@/public/svg/instagram.svg";
@@ -22,7 +22,7 @@ const Front = ({ children }: Props) => {
         <header className={styles.header}>
           <Link href="/">
             <div style={{ cursor: "pointer" }}>
-              <Image src={zeddLogo} alt="zeddlogo" />
+              <Image src={zeddlogo} alt="zeddlogo" />
             </div>
           </Link>
 
