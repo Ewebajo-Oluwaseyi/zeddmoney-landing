@@ -4,7 +4,7 @@ import Image from "next/image";
 import moneyIcon from "@/public/svg/money.svg";
 import convertIcon from "@/public/svg/convert.svg";
 import secureIcon from "@/public/svg/secure.svg";
-
+import phoneImg from "@/public/img/phone.png";
 const Hero = (): ReactElement => {
   return (
     <div className={styles.hero}>
@@ -20,12 +20,7 @@ const Hero = (): ReactElement => {
           </div>
         </div>
         <div className={styles.hero_imagesection}>
-          <Image
-            src="https://res.cloudinary.com/zeddpay/image/upload/v1646577895/Rectangle_f4wkgx.svg"
-            alt="image"
-            width="500"
-            height="600"
-          />
+          <Image src={phoneImg} alt="image" width="500" height="600" />
           {/*<div className={styles.avartar}>
             <Image src={Avatar6} alt="image" />
           </div>

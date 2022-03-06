@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import styles from "./Started.module.scss";
 import Image from "next/image";
-import startedImageMobile from "@/public/svg/startedImageMobile.svg";
+import Rectangle2 from "@/public/img/Rectangle2.png";
 
 const Started = (): ReactElement => {
   const breakPoints = [];
@@ -30,9 +30,10 @@ const Started = (): ReactElement => {
               className={styles.started_image1}
             />*/}
             <Image
-              src={startedImageMobile}
+              src={Rectangle2}
               alt="image"
-              height="400"
+              height="500"
+              width="400"
               className={styles.started_image2}
             />
           </div>
