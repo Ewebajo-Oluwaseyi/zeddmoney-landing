@@ -27,7 +27,7 @@ const Question = (): ReactElement => {
                   onClick={() => item.answer && setShowAns(!showAns)}
                 >
                   <Image
-                    src={showAns ? item.addIcon : item.minusIcon}
+                    src={showAns ? item.minusIcon : item.addIcon}
                     alt=""
                     width="35"
                     height="35"
