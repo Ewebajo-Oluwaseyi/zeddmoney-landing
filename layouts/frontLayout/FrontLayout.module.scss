@@ -8,7 +8,7 @@
 
 .header {
   width: 100%;
-  background-color: $col-white;
+  background-color: #fafafa;
   padding: 1rem 5%;
   position: relative;
   @include flex(space-between, center, nowrap);
@@ -35,7 +35,7 @@
   }
   .header_menuLink {
     font-size: 0.9rem;
-    color: $col-primary;
+    color: $col-black;
     transition: all 0.1s ease-out;
 
     &:hover {
@@ -86,38 +86,51 @@
     }
   }
 }
-.footer {
-  padding: 1.5rem 5%;
-  background-color: $col-dark;
-  color: $col-white;
-  flex-direction: column;
-  align-items: flex-start;
-
-  .footer_payment {
-    width: 30%;
-    font-size: 13px;
-    @include respondMax("tablet") {
-      width: 80%;
-      font-size: 2rem;
+.footerWrapper {
+  margin: 1rem 5%;
+  @include flex(space-between, center, nowrap);
+  border-top: 1px solid rgba(49, 53, 58, 0.12);
+  @include respondMax("tablet") {
+    margin: 8rem 5% 2rem;
+  }
+  .footer {
+    display: flex;
+    margin: 2rem auto;
+    align-items: center;
+    p {
+      font-size: 12px;
+      color: rgba(49, 53, 58, 0.7);
     }
   }
-  .footer_socials {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-    width: fit-content;
-    margin-top: 10px;
-    @include respondMax("tablet") {
-      column-gap: 1.5rem;
+}
+
+.header_buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  column-gap: 1rem;
+  @include respondMax("tablet") {
+    width: 85%;
+    margin: 1.5rem auto;
+    row-gap: 1.2rem;
+    grid-template-columns: 1fr;
+    display: none;
+  }
+  .header_button {
+    padding: 1.1rem 1.9rem !important;
+    @extend %btn_primary;
+
+    &:nth-child(1) {
+      @extend %btn_primary_outline;
+      color: $col-green;
+      border-color: $col-green;
+      font-size: 12px;
     }
 
     @include respondMax("tablet") {
-      order: 2;
+      width: 100%;
+      font-size: 12px;
+      padding: 2.5rem 4.5rem !important;
     }
-  }
-  .footer_social:hover {
-    transition: all 0.2s ease-out;
-    filter: grayscale(100%);
-    transform: scale(1.05);
   }
 }

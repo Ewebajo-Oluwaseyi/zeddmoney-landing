@@ -6,34 +6,39 @@
   padding: 4rem 5%;
   height: 100%;
   margin-top: 2rem;
+  @include respondMax("tablet") {
+    padding: 4rem 0;
+  }
 }
 
 .about {
   margin-bottom: 4rem;
-  @include flex(space-between, center, nowrap);
+  @include flex(space-between, flex-start, nowrap);
   @include respondMax("tablet") {
     @include flex(space-between, center, column nowrap);
+    &:nth-child(1) {
+      @include flex(space-between, center, column-reverse nowrap);
+    }
   }
 }
 
 .about_textsection {
   text-align: left;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   margin-right: 20px;
   width: 50%;
   h3 {
-    font-size: 48px;
-    color: $col-primary;
-    font-family: "Space Grotesk", sans-serif;
+    font-size: 38px;
+    color: $col-black;
     margin: 0;
     @include respondMax("tablet") {
       font-size: 25px;
+      text-align: left;
     }
   }
   h4 {
     font-size: 20px;
     color: $col-black;
-    font-family: "Space Grotesk", sans-serif;
     margin: 0;
   }
   p {
@@ -44,12 +49,14 @@
     @include respondMax("tablet") {
       font-size: 12px;
       line-height: 4rem;
+      text-align: left;
     }
   }
   @include respondMax("tablet") {
-    padding: 1rem 2%;
+    padding: 1rem 8%;
     text-align: center;
     width: 100%;
+    text-align: left;
   }
 }
 
@@ -81,16 +88,84 @@
     }
   }
 }
-
-.about_imagesection2 {
-  display: block;
+.about_imagesection1 {
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 10;
+  margin: 0 20px;
+  padding: 0 60px;
+  background-image: url("/svg/heroTop.svg");
+  background-color: #007de8;
+  border-radius: 20px;
   @include respondMax("tablet") {
-    display: none;
+    padding: 0 20px;
+    margin: 0;
+  }
+  > span {
+    margin-top: 50px !important;
+    @include respondMax("tablet") {
+      width: 100% !important;
+      margin-top: 10px !important;
+    }
+  }
+  @include respondMax("tablet") {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    margin: 0;
   }
 }
+.about_imagesection2 {
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 10;
+  margin: 0 20px;
+  background-image: url("/svg/aboutDobble.svg");
+  background-color: #00e8be;
+  border-radius: 20px;
+  width: 50%;
+  height: 100%;
+  @include respondMax("tablet") {
+    padding: 0 20px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @include respondMax("tablet") {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    margin: 0;
+  }
 
-.about_image {
-  // position: absolute;
-  // bottom: 0;
-  // right: 0;
+  .about_image {
+    color: $col-white;
+    padding: 110px 50px;
+    font-size: 20px;
+    @include respondMax("tablet") {
+      margin-bottom: 50px;
+    }
+    h2 {
+      &:nth-child(2) {
+        margin-left: 20px;
+      }
+      &:nth-child(3) {
+        margin-left: 40px;
+      }
+    }
+    @include respondMax("tablet") {
+      padding: 80px 50px;
+    }
+  }
+  .hands {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    > span {
+      border-bottom-right-radius: 20px;
+    }
+    @include respondMax("tablet") {
+      bottom: 0;
+    }
+  }
 }

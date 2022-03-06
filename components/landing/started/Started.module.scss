@@ -7,7 +7,12 @@
   height: 100%;
   margin-top: 2rem;
   margin: 0 40px;
-  background-color: rgba(0, 0, 0, 0.03);
+  background: linear-gradient(
+    161.48deg,
+    #007de8 -47.77%,
+    rgba(0, 232, 190, 0) 146.51%
+  );
+
   border-radius: 32px;
   position: relative;
   @include respondMax("tablet") {
@@ -18,42 +23,42 @@
 .started {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  margin: 0rem 5%;
+  flex-direction: column;
+  margin: 0rem 20%;
   @include respondMax("tablet") {
-    flex-direction: column;
+    margin: 20px;
   }
 }
 
 .started_textsection {
-  text-align: left;
-  padding: 1rem 2rem;
-  width: 50%;
-  margin-right: 20px;
+  text-align: center;
+  padding: 1rem 3rem 0rem;
   position: relative;
   h3 {
-    font-size: 48px;
-    color: $col-black;
-    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    color: $col-white;
     margin: 0;
+    padding: 0 40px;
     @include respondMax("tablet") {
-      font-size: 25px;
+      padding: 0;
+      font-size: 20px;
     }
   }
   h4 {
     font-size: 20px;
     color: $col-black;
-    font-family: "Space Grotesk", sans-serif;
     margin: 0;
   }
   p {
     margin-top: 1rem;
-    color: $col-grey !important;
+    color: $col-white !important;
     line-height: 2rem;
     font-size: 18px;
+    padding: 0 50px;
     @include respondMax("tablet") {
       font-size: 15px;
       line-height: 4rem;
+      padding: 0;
     }
   }
   @include respondMax("tablet") {
@@ -61,25 +66,26 @@
     width: 100%;
     margin-right: 0px;
   }
-}
+  .started_buttons {
+    margin: 1.5rem 10%;
 
-.started_buttons {
-  margin: 1.5rem 0;
-  width: fit-content;
-  text-align: left;
-  width: 100%;
-  font-size: 20px;
-  @include respondMax("tablet") {
-    width: 50%;
-    margin: 1.5rem 0;
-  }
-  .started_button {
-    @extend %btn_primary;
-    padding: 1.5rem 5rem !important;
     @include respondMax("tablet") {
-      font-size: 10px;
       width: 100%;
-      padding: 2.5rem 4.5rem !important;
+      margin: 1.5rem 0;
+    }
+    .started_button {
+      @extend %btn_primary;
+      background-color: $col-white;
+      color: $col-primary;
+      display: block !important;
+      padding: 1.5rem 5rem !important;
+      margin: 20px auto;
+      width: 100%;
+      @include respondMax("tablet") {
+        font-size: 10px;
+        width: 100%;
+        padding: 2.5rem 4.5rem !important;
+      }
     }
   }
 }
@@ -87,18 +93,25 @@
 .started_imagesection {
   //margin-top: 500px;
   position: relative;
-}
-
-.started_image {
-  margin-top: 160px;
-  z-index: 20;
-  @include respondMax("tablet") {
-    margin-top: 60px;
-    margin-left: 40px;
+  margin: 0 auto;
+  .started_image {
+    .started_image1 {
+      > span {
+        display: block;
+        @include respondMax("tablet") {
+          display: none;
+        }
+      }
+    }
+    .started_image2 {
+      > span {
+        display: none;
+        @include respondMax("tablet") {
+          display: block;
+        }
+      }
+    }
   }
-  // position: absolute;
-  // bottom: 0;
-  // right: 0;
 }
 
 .okayHand {

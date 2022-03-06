@@ -3,12 +3,9 @@ import styles from "./FrontLayout.module.scss";
 import Link from "next/link";
 import { navLinks } from "@/mock";
 import zeddlogo from "@/public/svg/zeddlogo.svg";
-import zeddlogolight from "@/public/svg/zeddlogolight.svg";
-import facebookIcon from "@/public/svg/facebook.svg";
-import instagramIcon from "@/public/svg/instagram.svg";
-import twitterIcon from "@/public/svg/twitter.svg";
 import sidebarIcon from "@/public/svg/sidebar.svg";
 import Image from "next/image";
+import copyright from "@/public/svg/copyright.svg";
 
 interface Props {
   children: React.ReactNode;
@@ -42,6 +39,10 @@ const Front = ({ children }: Props) => {
               ))}
             </ul>
           </nav>
+          <div className={styles.header_buttons}>
+            <button className={styles.header_button}>Log In</button>
+            <button className={styles.header_button}>Get Started</button>
+          </div>
           <div
             className={styles.sidebarIcon}
             onClick={() => setShowNav(!showNav)}
@@ -71,40 +72,10 @@ const Front = ({ children }: Props) => {
           </nav>
         </div>
         <main>{children}</main>
-        <footer className={styles.footer}>
-          <Image src={zeddlogolight} alt="zeddlogo" width="100" height="56" />
-          <div>
-            <p className={styles.footer_payment}>
-              Zeddpay is a payment platform that allows you pay for services
-              with your airtime.{" "}
-            </p>
-          </div>
-          <div className={styles.footer_socials}>
-            <Link href="/">
-              <a className={styles.footer_social}>
-                <Image
-                  src={instagramIcon}
-                  alt="instagram"
-                  width="20"
-                  height="30"
-                />
-              </a>
-            </Link>
-            <Link href="/">
-              <a className={styles.footer_social}>
-                <Image src={twitterIcon} alt="twitter" width="20" height="30" />
-              </a>
-            </Link>
-            <Link href="/">
-              <a className={styles.footer_social}>
-                <Image
-                  src={facebookIcon}
-                  alt="facebook"
-                  width="20"
-                  height="30"
-                />
-              </a>
-            </Link>
+        <footer className={styles.footerWrapper}>
+          <div className={styles.footer}>
+            <Image src={copyright} alt="" />
+            <p>ZEDDPAY 2022, ALL RIGHTS RESERVED</p>
           </div>
         </footer>
       </div>

@@ -8,15 +8,27 @@
   height: 100%;
   margin-top: 2rem;
   margin: auto;
+  @include respondMax("tablet") {
+    padding: 2rem 0rem;
+  }
 }
 
+.heroTop {
+  @include flex(space-between, center, nowrap);
+  padding: 1rem auto;
+  @include respondMax("tablet") {
+    @include flex(space-between, center, column nowrap);
+  }
+}
 .hero_textsection {
-  text-align: center;
-  padding: 1rem 18%;
+  text-align: left;
+  @include respondMax("tablet") {
+    text-align: center;
+    padding: 0rem 5% 2rem !important;
+  }
   h3 {
     font-size: 48px;
     color: $col-black;
-    font-family: "Space Grotesk", sans-serif;
     margin: 0;
     @include respondMax("tablet") {
       font-size: 25px;
@@ -25,15 +37,43 @@
   h4 {
     font-size: 20px;
     color: $col-black;
-    font-family: "Space Grotesk", sans-serif;
     margin: 0;
   }
   p {
     margin-top: 1rem;
     color: $col-grey !important;
-    padding: 0 10%;
     line-height: 2rem;
     font-size: 18px;
+    text-align: left;
+    @include respondMax("tablet") {
+      padding: 0;
+      font-size: 15px;
+      line-height: 4rem;
+      text-align: center;
+    }
+  }
+  @include respondMax("tablet") {
+    padding: 1rem 2%;
+  }
+}
+
+.hero_textsection2 {
+  text-align: center;
+  @include respondMax("tablet") {
+    margin: 20px 0px;
+  }
+  h4 {
+    font-size: 24px;
+    color: $col-black;
+    margin: 0;
+  }
+  p {
+    margin-top: 1rem;
+    color: $col-grey !important;
+    line-height: 2rem;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20%;
     @include respondMax("tablet") {
       padding: 0;
       font-size: 15px;
@@ -46,19 +86,19 @@
 }
 
 .hero_buttons {
-  margin: 1.5rem auto;
+  margin: 1.5rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: fit-content;
   column-gap: 1rem;
   @include respondMax("tablet") {
-    width: 85%;
-    margin: 1.5rem auto;
+    width: 100%;
+    margin: 1.5rem 0;
     row-gap: 1.2rem;
     grid-template-columns: 1fr;
   }
   .hero_button {
-    padding: 1.1rem 1.9rem !important;
+    padding: 1.1rem 4rem !important;
     @extend %btn_primary;
 
     &:nth-child(2) {
@@ -79,14 +119,26 @@
   place-items: center;
   position: relative;
   z-index: 10;
+  margin: 0 20px;
+  padding: 0 60px;
+  background-image: url("/svg/heroTop.svg");
+  background-color: #007de8;
+  border-radius: 20px;
+  @include respondMax("tablet") {
+    padding: 0 20px;
+    margin: 0;
+  }
   > span {
+    margin-top: 50px !important;
     @include respondMax("tablet") {
-      width: 80% !important;
+      width: 100% !important;
+      margin-top: 10px !important;
     }
   }
   @include respondMax("tablet") {
     margin-top: 4rem;
     margin-bottom: 6rem;
+    margin: 0;
   }
 }
 
@@ -143,27 +195,36 @@
 }
 
 .hero_bottomsections {
-  margin: 1.5rem auto;
+  margin: 4rem auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: fit-content;
   column-gap: 3rem;
   @include respondMax("tablet") {
     width: 85%;
-    margin: 1.5rem auto;
+    margin: 1.5rem auto 3rem;
     row-gap: 2rem;
     grid-template-columns: 1fr;
   }
   .hero_bottomsection {
-    @include flex(space-between, center, column nowrap);
+    @include flex(space-between, flex-start, column nowrap);
+    background-image: url("/svg/heroDoodle.svg");
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-radius: 10px;
     h4 {
-      font-family: "Space Grotesk", sans-serif;
       margin: 0;
-      font-size: 20px;
-      text-align: center;
+      font-size: 18px;
+      text-align: left;
+      margin-top: 13px;
     }
     p {
-      text-align: center;
+      text-align: left;
+      margin: 0;
+      margin-top: 13px;
+      margin-bottom: 10px;
+      padding-right: 20%;
+      line-height: 20px;
       color: $col-grey !important;
       @include respondMax("tablet") {
         font-size: 12px;

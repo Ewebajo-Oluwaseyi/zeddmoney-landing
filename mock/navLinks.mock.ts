@@ -25,6 +25,18 @@ const frontLinks: NavLink[] = [
     url: "/",
     blank: false,
   },
+  ,
+  {
+    title: "Log In",
+    url: "/",
+    blank: false,
+  },
+  ,
+  {
+    title: "Get Started",
+    url: "/",
+    blank: false,
+  },
 ];
 
 export const navLinks = {

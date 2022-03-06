@@ -1,10 +1,9 @@
 import React, { ReactElement } from "react";
 import styles from "./How.module.scss";
 import Image from "next/image";
-import createImage from "@/public/img/Group-221.png";
-import activateImage from "@/public/img/Group-222.png";
-import creditImage from "@/public/img/Group-223.png";
-import makeImage from "@/public/img/Group-224.png";
+import howPhone from "@/public/svg/howPhone.svg";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const How = (): ReactElement => {
   return (
@@ -17,17 +16,71 @@ const How = (): ReactElement => {
         </p>
       </div>
       <div className={styles.how_imagesection}>
-        <div className={styles.how_image}>
-          <Image src={createImage} alt="image" />
+        <div className={styles.how_imagesection_screen}>
+          <div className={styles.how_image}>
+            <div className={styles.how_image_textsection}>
+              <h4>Create a free account</h4>
+              <p>
+                Login to the Zeddpay app and create a free account in a few
+                minutes.
+              </p>
+            </div>
+            <Image src={howPhone} alt="image" />
+          </div>
+          <div className={styles.how_image}>
+            <div className={styles.how_image_textsection}>
+              <h4>Create a free account</h4>
+              <p>
+                Login to the Zeddpay app and create a free account in a few
+                minutes.
+              </p>
+            </div>
+            <Image src={howPhone} alt="image" />
+          </div>
+          <div className={styles.how_image}>
+            <div className={styles.how_image_textsection}>
+              <h4>Create a free account</h4>
+              <p>
+                Login to the Zeddpay app and create a free account in a few
+                minutes.
+              </p>
+            </div>
+            <Image src={howPhone} alt="image" />
+          </div>
         </div>
-        <div className={styles.how_image}>
-          <Image src={activateImage} alt="image" />
-        </div>
-        <div className={styles.how_image}>
-          <Image src={creditImage} alt="image" />
-        </div>
-        <div className={styles.how_image}>
-          <Image src={makeImage} alt="image" />
+        <div className={styles.how_imagesection_mobile}>
+          <Carousel showThumbs={false}>
+            <div className={styles.how_image}>
+              <div className={styles.how_image_textsection}>
+                <h4>Create a free account</h4>
+                <p>
+                  Login to the Zeddpay app and create a free account in a few
+                  minutes.
+                </p>
+              </div>
+              <Image src={howPhone} alt="image" />
+            </div>
+            <div className={styles.how_image}>
+              <div className={styles.how_image_textsection}>
+                <h4>Create a free account</h4>
+                <p>
+                  Login to the Zeddpay app and create a free account in a few
+                  minutes.
+                </p>
+              </div>
+              <Image src={howPhone} alt="image" />
+            </div>
+            <div className={styles.how_image}>
+              <div className={styles.how_image_textsection}>
+                <h4>Create a free account</h4>
+                <p>
+                  Login to the Zeddpay app and create a free account in a few
+                  minutes.
+                </p>
+              </div>
+              <Image src={howPhone} alt="image" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </div>
