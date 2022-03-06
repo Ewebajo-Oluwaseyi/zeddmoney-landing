@@ -2,7 +2,6 @@ import React, { ReactElement, useState } from "react";
 import styles from "./Question.module.scss";
 import Image from "next/image";
 import face from "@/public/svg/face.svg";
-import { questions } from "@/mock";
 import addIcon from "@/public/svg/add-circle.svg";
 import minusIcon from "@/public/svg/minus-circle.svg";
 
