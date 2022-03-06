@@ -66,13 +66,13 @@ const Footer = (): ReactElement => {
           <div className={styles.footer_section}>
             <h4>Community</h4>
             <p>FAQs</p>
-            <p>
-              Blog{" "}
+            <span>
+              <p>Blog </p>
               <span>
                 <Image src={fire} alt="" />
                 COMING SOON
               </span>
-            </p>
+            </span>
           </div>
         </div>
       </div>
