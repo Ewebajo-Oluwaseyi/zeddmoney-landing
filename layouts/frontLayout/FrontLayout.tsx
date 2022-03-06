@@ -18,7 +18,7 @@ const Front = ({ children }: Props) => {
       <div className={styles.layout}>
         <header className={styles.header}>
           <Link href="/">
-            <div style={{ cursor: "pointer" }}>
+            <div style={{ cursor: "pointer" }} className={styles.headerlogo}>
               <Image src={zeddlogo} alt="zeddlogo" />
             </div>
           </Link>

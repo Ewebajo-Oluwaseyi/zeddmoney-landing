@@ -6,10 +6,10 @@
   @extend %page-section;
 
   height: 100%;
-  margin-top: 2rem;
+  margin-top: 2rem !important;
   margin: auto;
   @include respondMax("tablet") {
-    padding: 2rem 0rem;
+    padding: 6rem 0rem;
   }
 }
 
@@ -60,7 +60,7 @@
 .hero_textsection2 {
   text-align: center;
   @include respondMax("tablet") {
-    margin: 20px 0px;
+    margin: 20px;
   }
   h4 {
     font-size: 24px;
@@ -221,7 +221,6 @@
     p {
       text-align: left;
       margin: 0;
-      margin-top: 13px;
       margin-bottom: 10px;
       padding-right: 20%;
       line-height: 20px;

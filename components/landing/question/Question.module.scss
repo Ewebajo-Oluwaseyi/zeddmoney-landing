@@ -6,6 +6,9 @@
   padding: 2rem 5% 4rem;
   height: 100%;
   margin-top: 2rem;
+  @include respondMax("tablet") {
+    margin-top: 0;
+  }
 }
 
 .question {

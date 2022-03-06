@@ -87,6 +87,18 @@
     @include respondMax("tablet") {
       display: block;
     }
+    > div {
+      > div {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        > ul {
+          position: relative !important;
+          > li {
+            background-color: #007de8 !important;
+          }
+        }
+      }
+    }
     .how_image {
       margin: 0 auto;
       padding: 20px 20px 0px;

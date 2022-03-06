@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import styles from "./How.module.scss";
 import Image from "next/image";
-import howPhone from "@/public/svg/howPhone.svg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
@@ -25,7 +24,12 @@ const How = (): ReactElement => {
                 minutes.
               </p>
             </div>
-            <Image src={howPhone} alt="image" />
+            <Image
+              src="https://res.cloudinary.com/zeddpay/image/upload/v1646577895/Rectangle_f4wkgx.svg"
+              alt="image"
+              width="500"
+              height="600"
+            />
           </div>
           <div className={styles.how_image}>
             <div className={styles.how_image_textsection}>
@@ -35,7 +39,12 @@ const How = (): ReactElement => {
                 minutes.
               </p>
             </div>
-            <Image src={howPhone} alt="image" />
+            <Image
+              src="https://res.cloudinary.com/zeddpay/image/upload/v1646577895/Rectangle_f4wkgx.svg"
+              alt="image"
+              width="500"
+              height="600"
+            />
           </div>
           <div className={styles.how_image}>
             <div className={styles.how_image_textsection}>
@@ -45,11 +54,16 @@ const How = (): ReactElement => {
                 minutes.
               </p>
             </div>
-            <Image src={howPhone} alt="image" />
+            <Image
+              src="https://res.cloudinary.com/zeddpay/image/upload/v1646577895/Rectangle_f4wkgx.svg"
+              alt="image"
+              width="500"
+              height="600"
+            />
           </div>
         </div>
         <div className={styles.how_imagesection_mobile}>
-          <Carousel showThumbs={false}>
+          <Carousel showThumbs={false} showStatus={false}>
             <div className={styles.how_image}>
               <div className={styles.how_image_textsection}>
                 <h4>Create a free account</h4>
@@ -58,7 +72,12 @@ const How = (): ReactElement => {
                   minutes.
                 </p>
               </div>
-              <Image src={howPhone} alt="image" />
+              <Image
+                src="https://res.cloudinary.com/zeddpay/image/upload/v1646577895/Rectangle_f4wkgx.svg"
+                alt="image"
+                width="500"
+                height="600"
+              />
             </div>
             <div className={styles.how_image}>
               <div className={styles.how_image_textsection}>
@@ -68,7 +87,12 @@ const How = (): ReactElement => {
                   minutes.
                 </p>
               </div>
-              <Image src={howPhone} alt="image" />
+              <Image
+                src="https://res.cloudinary.com/zeddpay/image/upload/v1646577895/Rectangle_f4wkgx.svg"
+                alt="image"
+                width="500"
+                height="600"
+              />
             </div>
             <div className={styles.how_image}>
               <div className={styles.how_image_textsection}>
@@ -78,7 +102,12 @@ const How = (): ReactElement => {
                   minutes.
                 </p>
               </div>
-              <Image src={howPhone} alt="image" />
+              <Image
+                src="https://res.cloudinary.com/zeddpay/image/upload/v1646577895/Rectangle_f4wkgx.svg"
+                alt="image"
+                width="500"
+                height="600"
+              />
             </div>
           </Carousel>
         </div>
