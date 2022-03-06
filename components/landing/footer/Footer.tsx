@@ -7,6 +7,7 @@ import instagramIcon from "@/public/svg/instagram.svg";
 import twitterIcon from "@/public/svg/twitter.svg";
 import Image from "next/image";
 import fire from "@/public/svg/fire.svg";
+import Link from "next/link";
 
 const Footer = (): ReactElement => {
   return (
@@ -20,15 +21,26 @@ const Footer = (): ReactElement => {
           </p>
         </div>
         <div className={styles.footer_socials}>
-          <a href="/" className={styles.footer_social}>
-            <Image src={facebookIcon} alt="facebook" width="20" height="30" />
-          </a>
-          <a href="/" className={styles.footer_social}>
-            <Image src={twitterIcon} alt="twitter" width="20" height="30" />
-          </a>
-          <a href="/" className={styles.footer_social}>
-            <Image src={instagramIcon} alt="instagram" width="20" height="30" />
-          </a>
+          <Link href="/">
+            <a className={styles.footer_social}>
+              <Image src={facebookIcon} alt="facebook" width="20" height="30" />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className={styles.footer_social}>
+              <Image src={twitterIcon} alt="twitter" width="20" height="30" />
+            </a>
+          </Link>
+          <Link href="/">
+            <a className={styles.footer_social}>
+              <Image
+                src={instagramIcon}
+                alt="instagram"
+                width="20"
+                height="30"
+              />
+            </a>
+          </Link>
         </div>
       </div>
       <div className={styles.footer_sections}>
@@ -65,15 +77,21 @@ const Footer = (): ReactElement => {
         </div>
       </div>
       <div className={styles.footer_socials1}>
-        <a href="/" className={styles.footer_social}>
-          <Image src={facebookIcon} alt="facebook" width="20" height="30" />
-        </a>
-        <a href="/" className={styles.footer_social}>
-          <Image src={twitterIcon} alt="twitter" width="20" height="30" />
-        </a>
-        <a href="/" className={styles.footer_social}>
-          <Image src={instagramIcon} alt="instagram" width="20" height="30" />
-        </a>
+        <Link href="/">
+          <a className={styles.footer_social}>
+            <Image src={facebookIcon} alt="facebook" width="20" height="30" />
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.footer_social}>
+            <Image src={twitterIcon} alt="twitter" width="20" height="30" />
+          </a>
+        </Link>
+        <Link href="/">
+          <a className={styles.footer_social}>
+            <Image src={instagramIcon} alt="instagram" width="20" height="30" />
+          </a>
+        </Link>
       </div>
     </footer>
   );
